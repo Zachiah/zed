@@ -214,6 +214,11 @@ impl ChannelView {
                         })
                         .ok();
                     })
+                    .separator()
+                    .action("Cut", Box::new(editor::actions::Cut))
+                    .action("Copy", Box::new(editor::actions::Copy))
+                    .action("Copy and Trim", Box::new(editor::actions::CopyAndTrim))
+                    .action("Paste", Box::new(editor::actions::Paste))
                 }))
             });
             editor
